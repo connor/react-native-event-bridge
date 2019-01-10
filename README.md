@@ -99,7 +99,7 @@ EventBridge.emitEventCallback(this, 'EventWithCallback', () => {
 }
 
 // Handle events with callback
-- (void)onEventWithName:(NSString *)eventName info:(nullable NSDictionary *)info callback:(MSREventBridgeReventReceiverCallback)callback;
+- (void)onEventWithName:(NSString *)eventName info:(nullable NSDictionary *)info callback:(MSREventBridgeEventReceiverCallback)callback;
 {
   // ...
 }
@@ -220,7 +220,7 @@ EventBridge.emitEventInfoCallback(this, 'LoadData', {'count' : 10}, (error, resu
 
 #### iOS
 ```objc
-- (void)onEventWithName:(NSString *)eventName info:(nullable NSDictionary *)info callback:(MSREventBridgeReventReceiverCallback)callback
+- (void)onEventWithName:(NSString *)eventName info:(nullable NSDictionary *)info callback:(MSREventBridgeEventReceiverCallback)callback
 {
   RCTLog(@"%@ - Received event that expects callback: '%@', with info: %@", self.UUID.UUIDString, eventName, info);
 
